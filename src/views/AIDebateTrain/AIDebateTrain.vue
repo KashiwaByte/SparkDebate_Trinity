@@ -6,9 +6,10 @@ import CheckAllSession from './Sub/CheckAllSession.vue'
 import Session from './Sub/Session.vue'
 import DebateTrain from './Sub/DebateTrain.vue'
 import DebateMatch from './AIMatch/DebateMatch.vue'
+import AIDebateCompetition from './Sub/AIDebateCompetition.vue';
 const state = reactive({
   // 探索AI助手, 创造AI助手, 查看所有聊天记录, 对话
-  mode: '探索AI助手',
+  mode: 'AI辩论训练',
 
   index_session_chosen: 0,
   sessionList: [{
@@ -19,8 +20,8 @@ const state = reactive({
   }, {
     session_id: 124,
     avatar_url: '',
-    ai_name: 'TBRLIS',
-    brief: '西电湖人你是真的火了'
+    ai_name: '西电辩手',
+    brief: '人工智能学院辩论队赛高'
   }]
 })
 
@@ -41,10 +42,10 @@ const navList = [
     name: 'AI辩论训练',
   },
   {
-    name: 'AI辩论广场',
+    name: 'AI辩论赛事',
   },
   {
-    name:"AI辩论赛事"
+    name:"赛事发布"
   }
 ]
 
@@ -57,7 +58,9 @@ const clickNav = (name) => {
   if(name === 'AI辩论训练') {
     state.mode = 'AI辩论训练'
   }
-  else if(name === 'AI辩论赛事') {
+  else if(name === '赛事发布') {
+    state.mode = '赛事发布'
+  } else if(name === 'AI辩论赛事') {
     state.mode = 'AI辩论赛事'
   }
 }
@@ -102,7 +105,7 @@ watch(() => state.mode, (val) => {
           />
       </el-avatar>
     </div>
-     <DebateMatch v-if="state.mode === 'AI辩论赛事'" style="z-index:99"></DebateMatch>
+     <DebateMatch v-if="state.mode === '赛事发布'" style="z-index:99"></DebateMatch>
     <!-- aside和main -->
     <div class="mid" v-else>
       <div class="aside">
@@ -136,6 +139,7 @@ watch(() => state.mode, (val) => {
         <CheckAllSession v-else-if="state.mode === '查看所有聊天记录'"></CheckAllSession>
         <Session v-else-if="state.mode === '对话'"></Session>
         <DebateTrain v-else-if="state.mode === 'AI辩论训练'"></DebateTrain>
+        <AIDebateCompetition v-else-if="state.mode === 'AI辩论赛事'"></AIDebateCompetition>
       </el-scrollbar>
     </div>
   </div>

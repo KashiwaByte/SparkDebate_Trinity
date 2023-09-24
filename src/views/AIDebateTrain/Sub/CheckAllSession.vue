@@ -7,13 +7,41 @@
             你的聊天记录
         </div>
         <div class="content">
-            <div class="item" v-for="count in 5">
+            <div class="item" v-for="count in 1">
                 <img src="/avatarDefault.png" >
                 <div class="name">
                     TABRIS
                 </div>
                 <div class="saying">
                     第十三使徒塔布里斯自由天使。
+                </div>
+                <div class="arrow">
+                    <el-icon color="#7565C6" size="40"><ArrowRightBold/></el-icon>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item" v-for="count in 1">
+                <img src="/avatarDefault.png" >
+                <div class="name">
+                    kashiwa1
+                </div>
+                <div class="saying">
+                    明日香是最好看的。
+                </div>
+                <div class="arrow">
+                    <el-icon color="#7565C6" size="40"><ArrowRightBold/></el-icon>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="item" v-for="count in 1">
+                <img src="/avatarDefault.png" >
+                <div class="name">
+                    wt1
+                </div>
+                <div class="saying">
+                    凌波丽是最好看的。
                 </div>
                 <div class="arrow">
                     <el-icon color="#7565C6" size="40"><ArrowRightBold/></el-icon>

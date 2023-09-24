@@ -7,7 +7,7 @@
         src="https://kashiwabyte-sparkdebate.demo.swanhub.co"
         frameborder="0"
         width="1240"
-        height="800"
+        height="1000"
     ></iframe>
 </template>
 

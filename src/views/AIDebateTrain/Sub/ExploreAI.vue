@@ -4,10 +4,10 @@
 
 <template>
     <iframe
-        src="https://kashiwabyte-xidian-debate.demo.swanhub.co"
+        src="https://kashiwabyte-sparkdebate-square.demo.swanhub.co"
         frameborder="0"
         width="1240"
-        height="800"
+        height="1000"
     ></iframe>
 </template>
 
